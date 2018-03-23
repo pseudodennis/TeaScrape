@@ -6,9 +6,6 @@ import org.jsoup.select.Elements;
 
 import java.io.IOException;
 
-/**
- * A simple example, used on the jsoup website.
- */
 public class Main {
 	public static void main(String[] args) throws IOException {
 
