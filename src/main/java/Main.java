@@ -74,19 +74,12 @@ public class Main {
 
 				}
 
+				// product separator
 				System.out.println();
-
-
 
 			} // end of looping through the products on the flavor page
 		} // end looping through flavor categories on main page
 
-/*		Elements newsHeadlines = doc.select("#mp-itn b a");
-		for (Element headline : newsHeadlines)
-		{
-			log("%s\n\t%s", headline.attr("title"), headline.absUrl("href"));
-		}
-*/
 	}
 
 	private static void log(String msg, String... vals) {
