@@ -77,9 +77,9 @@ public class Main {
 			} // end of looping through the products on the flavor page
 		} // end looping through flavor categories on main page
 
-	}
+	} // end of main()
 
 	private static void log(String msg, String... vals) {
 		System.out.println(String.format(msg, vals));
 	}
-}
+} // end of Main class
