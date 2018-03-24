@@ -5,10 +5,8 @@ import org.jsoup.nodes.Element;
 import org.jsoup.select.Elements;
 
 import java.io.IOException;
+import java.util.ArrayList;
 
-/**
- * A simple example, used on the jsoup website.
- */
 public class Main {
 	public static void main(String[] args) throws IOException {
 
@@ -66,11 +64,19 @@ public class Main {
 				System.out.println("Description:\t" + description.text());
 
 				// product tags
-				Elements tags = productDoc.select("div.tags");
+				System.out.print("Tags:\t\t\t");
+				Elements tags = productDoc.select("div.tags ul li a");
 				for (Element tag : tags)
 				{
-					System.out.println("Tags:\t\t\t" + tag.text());
+					// String tagname = tag.select("ul li a");
+					//System.out.println(tagname);
+					System.out.print(tag.text() + ", ");
+
 				}
+
+				System.out.println();
+
+
 
 			} // end of looping through the products on the flavor page
 		} // end looping through flavor categories on main page
