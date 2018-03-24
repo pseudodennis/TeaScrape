@@ -45,34 +45,31 @@ public class Main {
 				// navigate to product page
 				Document productDoc = Jsoup.connect(productURL).get();
 
-				//blank line separator
-				System.out.println();
+					//blank line separator
+					System.out.println();
 
-				// product parent flavor
-				System.out.println(flavorName + " Flavor Available:");
+					// product parent flavor
+					System.out.println(flavorName + " Flavor Available:");
 
-				// product name
-				Elements heading = productDoc.select("h1");
-				System.out.println("Name:\t\t\t" + heading.text());
+					// product name
+					Elements heading = productDoc.select("h1");
+					System.out.println("Name:\t\t\t" + heading.text());
 
-				// product sku
-				Elements sku = productDoc.select("div.product-sku");
-				System.out.println("SKU:\t\t\t" + sku.text());
+					// product sku
+					Elements sku = productDoc.select("div.product-sku");
+					System.out.println("SKU:\t\t\t" + sku.text());
 
-				// product description
-				Elements description = productDoc.select("div.product-description");
-				System.out.println("Description:\t" + description.text());
+					// product description
+					Elements description = productDoc.select("div.product-description");
+					System.out.println("Description:\t" + description.text());
 
-				// product tags
-				System.out.print("Tags:\t\t\t");
-				Elements tags = productDoc.select("div.tags ul li a");
-				for (Element tag : tags)
-				{
-					// String tagname = tag.select("ul li a");
-					//System.out.println(tagname);
-					System.out.print(tag.text() + ", ");
-
-				}
+					// product tags
+					System.out.print("Tags:\t\t\t");
+					Elements tags = productDoc.select("div.tags ul li a");
+					for (Element tag : tags)
+					{
+						System.out.print(tag.text() + ", ");
+					}
 
 				// product separator
 				System.out.println();
